@@ -2,14 +2,8 @@
   <header>
     <img src="../assets/img/dc-logo.png" alt="">
     <ul>
-        <li>
-            <a href="#">link</a>
-        </li>
-        <li>
-            <a href="#">link</a>
-        </li>
-        <li>
-            <a href="#">link</a>
+        <li v-for="link, i in links" :key="i" :class="link.here ? 'active' : null">
+            <a :href="link.href">{{link.name}}</a>
         </li>
     </ul>
   </header>
@@ -17,7 +11,67 @@
 
 <script>
 export default {
-  name: 'Header'
+  name: 'Header',
+  data() {
+    return {
+      links: [
+        {
+          'name' : 'CHARACTERS',
+          'here' : true,
+          'href' : '#'
+        },
+        {
+          'name' : 'COMICS',
+          'here' : true,
+          'href' : '#'
+        },
+        {
+          'name' : 'MOVIES',
+          'here' : true,
+          'href' : '#'
+        },
+        {
+          'name' : 'TV',
+          'here' : true,
+          'href' : '#'
+        },
+        {
+          'name' : 'GAMES',
+          'here' : true,
+          'href' : '#'
+        },
+        {
+          'name' : 'COLLECTIBLES',
+          'here' : true,
+          'href' : '#'
+        },
+        {
+          'name' : 'VIDEOS',
+          'here' : true,
+          'href' : '#'
+        },
+        {
+          'name' : 'FANS',
+          'here' : true,
+          'href' : '#'
+        },
+        {
+          'name' : 'NEWS',
+          'here' : true,
+          'href' : '#'
+        },
+        {
+          'name' : 'SHOP',
+          'here' : true,
+          'href' : '#'
+        },{
+          'name' : 'NEWS',
+          'here' : true,
+          'href' : '#'
+        },
+      ]
+    }
+  }
 }
 </script>
 
@@ -38,6 +92,7 @@ header {
 
       a {
         text-decoration: none;
+        color: #464646;
       }
     }
   }

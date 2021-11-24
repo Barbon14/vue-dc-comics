@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
     <div id="container">
       <Header/>
     </div>
@@ -8,14 +8,13 @@
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue';
 import Header from '@/components/Header.vue'
 
 export default {
   name: 'App',
   components: {
-    // HelloWorld,
-    Header
+    Header,
+    
   }
 }
 </script>
@@ -25,6 +24,10 @@ export default {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+#app {
+  font-family: sans-serif;
 }
 
 #container {
