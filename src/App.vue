@@ -1,20 +1,24 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
     <div id="container">
       <Header/>
+      <main>
+        <!-- contenuto pagina -->
+      </main>
+      <Footer/>
     </div>
   </div>
 </template>
 
 <script>
-import Header from '@/components/Header.vue'
+import Header from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
-    
+    Footer
   }
 }
 </script>
@@ -31,7 +35,7 @@ export default {
 }
 
 #container {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
 }
 </style>

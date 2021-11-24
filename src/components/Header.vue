@@ -1,9 +1,11 @@
 <template>
   <header>
-    <img src="../assets/img/dc-logo.png" alt="">
+    <img src="../assets/img/dc-logo.png" alt="logo DC comics">
     <ul>
-        <li v-for="link, i in links" :key="i" :class="link.here ? 'active' : null">
-            <a :href="link.href">{{link.name}}</a>
+        <li v-for="link, i in links" :key="i" >
+            <a :href="link.href" :class="link.here ? 'active' : null">
+              {{link.name}}
+            </a>
         </li>
     </ul>
   </header>
@@ -17,7 +19,7 @@ export default {
       links: [
         {
           'name' : 'CHARACTERS',
-          'here' : true,
+          'here' : false,
           'href' : '#'
         },
         {
@@ -27,46 +29,46 @@ export default {
         },
         {
           'name' : 'MOVIES',
-          'here' : true,
+          'here' : false,
           'href' : '#'
         },
         {
           'name' : 'TV',
-          'here' : true,
+          'here' : false,
           'href' : '#'
         },
         {
           'name' : 'GAMES',
-          'here' : true,
+          'here' : false,
           'href' : '#'
         },
         {
           'name' : 'COLLECTIBLES',
-          'here' : true,
+          'here' : false,
           'href' : '#'
         },
         {
           'name' : 'VIDEOS',
-          'here' : true,
+          'here' : false,
           'href' : '#'
         },
         {
           'name' : 'FANS',
-          'here' : true,
+          'here' : false,
           'href' : '#'
         },
         {
           'name' : 'NEWS',
-          'here' : true,
+          'here' : false,
           'href' : '#'
         },
         {
           'name' : 'SHOP',
-          'here' : true,
+          'here' : false,
           'href' : '#'
         },{
           'name' : 'NEWS',
-          'here' : true,
+          'here' : false,
           'href' : '#'
         },
       ]
@@ -81,7 +83,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 20px 0;
 
   ul {
     display: flex;
@@ -93,6 +95,10 @@ header {
       a {
         text-decoration: none;
         color: #464646;
+
+        &.active{
+          color: #3183fc;
+        }
       }
     }
   }
