@@ -166,9 +166,10 @@ footer {
         }
         
         img {
-            width: 450px;
-            height: 450px;
+            width: 45%;
+            aspect-ratio: 1;
             object-fit: cover;
+            object-position: center;
         }
     }
 }
