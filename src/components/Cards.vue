@@ -4,16 +4,26 @@
             <h2>
             CURRENT SERIES 
             </h2>
-            
+            <div class="cards_container">
+                <Card v-for="card, i in cards" :key="i" :info="card"/>
+            </div>
+            <h5>
+                <a href="#">
+                    LOAD MORE
+                </a>
+            </h5>
         </div>
     </section>
 </template>
 
 <script>
-
+import Card from '@/components/Card.vue';
 
 export default {
-    name : 'Card',
+    name : 'Cards',
+    components : {
+        Card
+    },
     data () {
         return {
             cards : [
@@ -98,8 +108,7 @@ export default {
 <style scoped lang="scss" >
 #cards {
     background-color: #1c1c1c;
-    // debug
-    height: 300px;
+    padding-bottom: 20px;
 
     h2 {
         color: white;
@@ -107,6 +116,23 @@ export default {
         padding: 10px 30px;
         transform: translate(0, -50%);
         display: inline-block;
+    }
+
+    .cards_container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    h5 {
+        text-align: center;
+
+        a {
+            padding: 10px 30px;
+            background-color: #3183fc;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+        }
     }
 }
 </style>

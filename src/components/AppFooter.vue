@@ -28,7 +28,7 @@
 import List from '@/components/List.vue'
 
 export default {
-    name : 'Footer',
+    name : 'AppFooter',
     components : {
         List,
     },
