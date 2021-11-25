@@ -2,19 +2,19 @@
     <footer>
         <div class="container">
             <div class="footer_lists">
-                <List 
+                <AppFooterList 
                     title="DC COMICS" 
                     :links="links1"
                 />
-                <List 
+                <AppFooterList 
                     title="SHOP" 
                     :links="links2"
                 />
-                <List 
+                <AppFooterList 
                     title="DC" 
                     :links="links3"
                 />
-                <List 
+                <AppFooterList 
                     title="SITES" 
                     :links="links4"
                 />
@@ -25,12 +25,12 @@
 </template>
 
 <script>
-import List from '@/components/List.vue'
+import AppFooterList from '@/components/AppFooterList.vue'
 
 export default {
     name : 'AppFooter',
     components : {
-        List,
+        AppFooterList,
     },
     data () {
         return {
