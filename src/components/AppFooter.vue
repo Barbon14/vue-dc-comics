@@ -21,16 +21,19 @@
             </div>
             <img src="../assets/img/dc-logo-bg.png" alt="">
         </div>
+        <AppFooterContacts/>
     </footer>
 </template>
 
 <script>
-import AppFooterList from '@/components/AppFooterList.vue'
+import AppFooterList from '@/components/AppFooterList.vue';
+import AppFooterContacts from '@/components/AppFooterContacts.vue'
 
 export default {
     name : 'AppFooter',
     components : {
         AppFooterList,
+        AppFooterContacts
     },
     data () {
         return {
