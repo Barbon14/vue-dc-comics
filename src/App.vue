@@ -1,13 +1,11 @@
 <template>
   <div id="app">
-    <div id="container">
       <Header/>
       <main>
         <!-- contenuto pagina -->
       </main>
       <Footer/>
     </div>
-  </div>
 </template>
 
 <script>
@@ -34,8 +32,9 @@ export default {
   font-family: sans-serif;
 }
 
-#container {
+.container {
   width: 70%;
   margin: 0 auto;
+  height: 100%;
 }
 </style>

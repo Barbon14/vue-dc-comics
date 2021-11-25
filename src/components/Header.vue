@@ -1,13 +1,15 @@
 <template>
   <header>
-    <img src="../assets/img/dc-logo.png" alt="logo DC comics">
-    <ul>
-        <li v-for="link, i in links" :key="i" >
-            <a :href="link.href" :class="link.here ? 'active' : null">
-              {{link.name}}
-            </a>
-        </li>
-    </ul>
+    <div class="container">
+      <img src="../assets/img/dc-logo.png" alt="logo DC comics">
+      <ul>
+          <li v-for="link, i in links" :key="i" >
+              <a :href="link.href" :class="link.here ? 'active' : null">
+                {{link.name}}
+              </a>
+          </li>
+      </ul>
+    </div>
   </header>
 </template>
 
@@ -80,10 +82,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 20px 0;
+
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   ul {
     display: flex;

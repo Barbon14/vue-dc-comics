@@ -1,7 +1,7 @@
 <template>
-  <footer>
-        <div class="footer_lists">
-            <span>
+    <footer>
+        <div class="container">
+            <div class="footer_lists">
                 <List 
                     title="DC COMICS" 
                     :links="links1"
@@ -10,20 +10,18 @@
                     title="SHOP" 
                     :links="links2"
                 />
-            </span>
-            <List 
-                title="DC" 
-                :links="links3"
-            />
-            <List 
-                title="SITES" 
-                :links="links4"
-            />
-        </div>
-        <div class="prova">
+                <List 
+                    title="DC" 
+                    :links="links3"
+                />
+                <List 
+                    title="SITES" 
+                    :links="links4"
+                />
+            </div>
             <img src="../assets/img/dc-logo-bg.png" alt="">
         </div>
-  </footer>
+    </footer>
 </template>
 
 <script>
@@ -154,24 +152,23 @@ footer {
     background-image: url(../assets/img/footer-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    justify-content: space-between;
     height: 380px;
 
-    .footer_lists {
-        height: 100%;
+    .container {
         display: flex;
-        flex-wrap: 1;
-        flex-direction: row;
-        padding: 30px;
-    }
+        justify-content: space-between;
 
-    .prova  {
-        height: 100%;
-
+        .footer_lists {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            padding: 30px 0;
+        }
+        
         img {
+            width: 450px;
+            height: 450px;
             object-fit: cover;
-            height: 120%;
         }
     }
 }
