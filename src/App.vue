@@ -4,6 +4,7 @@
       <Jumbotron/>
       <main>
         <!-- contenuto pagina -->
+        <Cards/>
       </main>
       <Footer/>
     </div>
@@ -12,6 +13,7 @@
 <script>
 import Header from '@/components/Header.vue';
 import Jumbotron from '@/components/Jumbotron.vue';
+import Cards from '@/components/Cards.vue';
 import Footer from '@/components/Footer.vue'
 
 export default {
@@ -19,6 +21,7 @@ export default {
   components: {
     Header,
     Jumbotron,
+    Cards,
     Footer
   }
 }
